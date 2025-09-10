@@ -44,13 +44,13 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Get access key from environment variables
-      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'YOUR_ACCESS_KEY_HERE';
+        // Get access key from environment variables
+        const accessKey = import.meta.env.VITE_WEB3FORM_API || 'YOUR_ACCESS_KEY_HERE';
       
-      if (accessKey === 'YOUR_ACCESS_KEY_HERE') {
-        // Fallback when not configured
-        throw new Error('Web3Forms not configured');
-      }
+        if (accessKey === 'YOUR_ACCESS_KEY_HERE') {
+          // Fallback when not configured
+          throw new Error('Web3Forms not configured');
+        }
 
       // Using Web3Forms - a free form submission service
       const submitData = new FormData();
